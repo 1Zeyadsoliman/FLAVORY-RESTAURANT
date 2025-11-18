@@ -77,4 +77,100 @@ h2 {
     text-align: center;
     padding-top: 6px;
   }
+  
+}
+.category-title {
+    color: #ffc107;
+    border-bottom: 2px solid #ffc107;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.menu-card {
+    background: #6c757d;
+    border: none;
+    transition: transform 0.25s ease;
+    overflow: hidden;
+    height: 100%;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+}
+
+.price-tag {
+    color: #ffc107;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.bg-black {
+    background-color: #343a40 !important;
+}
+
+.footer1 {
+    background-color: #343a40;
+}
+
+.footer2 {
+    padding: 1rem 0;
+}
+
+.footer3, .footer4 {
+    margin: 5px 0;
+    color: #fff;
+    text-align: center;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero-section {
+    margin-top: 0; 
+}
+
+.hero-buttons .btn {
+    transition: all 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animated-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animated-section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

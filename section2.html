@@ -8,6 +8,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="bg-dark text-white">
+<div id="loading" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #1a1a1a; display: flex; justify-content: center; align-items: center; z-index: 9999;">
+    <div class="spinner-border text-warning" style="width: 3rem; height: 3rem;">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
@@ -37,16 +42,36 @@
       </div>
     </div>
   </nav>
-
-  <section class="container py-5">
-  <h2 class="mb-4 text-center">Our Signature Menu</h2>
+<section class="hero-section bg-dark text-white">
+    <div class="container-fluid px-0">
+        <div class="row g-0">
+            <div class="col-lg-12">
+                <div class="hero-image" style="height: 60vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;">
+                    <div class="d-flex flex-column justify-content-center align-items-center h-100 text-center">
+                        <h1 class="display-3 fw-bold mb-4">Welcome to Flavory</h1>
+                        <p class="lead mb-4">Where every bite tells a story of flavor, passion, and perfection</p>
+                        <div class="hero-buttons">
+                            <a href="#reservation" class="btn btn-warning btn-lg me-3">Make Reservation</a>
+                            <a href="#menu" class="btn btn-outline-light btn-lg">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="menu" class="container py-5">
+    <h2 class="category-title text-center">Our Signature Menu</h2>
   <div class="row g-4">
     <div class="col-md-4">
       <div class="card bg-secondary text-white h-100">
         <img src="./img/steak.webp" class="imgs" alt="Steak">
         <div class="card-body">
           <h5 class="card-title">Grilled Beef Steak</h5>
-          <p class="card-text">Juicy and perfectly seasoned, served with roasted potatoes and signature sauce. <br> 240$ </p>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Juicy and perfectly seasoned, served with roasted potatoes and signature sauce. <br> 80$ </p>
         </div>
       </div>
     </div>
@@ -55,7 +80,10 @@
         <img src="./img/pizza.webp" class="imgs" alt="Pizza">
         <div class="card-body">
           <h5 class="card-title">Wood-Fired Pizza</h5>
-          <p class="card-text">Crispy base, fresh toppings, and melting mozzarella straight from our stone oven.<br> 140$</p>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Crispy base, fresh toppings, and melting mozzarella straight from our stone oven.<br> 30$</p>
         </div>
       </div>
     </div>
@@ -64,7 +92,10 @@
         <img src="./img/salad.webp" class="imgs" alt="Salad">
         <div class="card-body">
           <h5 class="card-title">Fresh Garden Salad</h5>
-          <p class="card-text">A mix of seasonal greens, cherry tomatoes, cucumbers, and a tangy dressing.<br> 70$</p>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">A mix of seasonal greens, cherry tomatoes, cucumbers, and a tangy dressing.<br> 10$</p>
         </div>
       </div>
     </div>
@@ -73,7 +104,10 @@
         <img src="./img/pasta.webp" class="imgs" alt="Mushroom Pasta">
         <div class="card-body">
           <h5 class="card-title">Creamy Mushroom Pasta</h5>
-          <p class="card-text">Rich and creamy mushroom sauce over al dent pasta, topped with herbs and parmesan.<br> 120$</p>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Rich and creamy mushroom sauce over al dent pasta, topped with herbs and parmesan.<br> 40$</p>
         </div>
       </div>
     </div>
@@ -82,7 +116,10 @@
         <img src="./img/lava cake.webp" class="imgs" alt="Chocolate Lava Cake">
         <div class="card-body">
           <h5 class="card-title">Chocolate Lava Cake</h5>
-          <p class="card-text">Warm chocolate cake with a gooey center, served with a scoop of vanilla ice cream.<br> 80$</p>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Warm chocolate cake with a gooey center, served with a scoop of vanilla ice cream.<br> 25$</p>
         </div>
       </div>
     </div>
@@ -91,12 +128,315 @@
     <img src="./img/burger.jfif" class="imgs" alt="Burger">
     <div class="card-body">
       <h5 class="card-title">Smash Beef Burger</h5>
-      <p class="card-text">Double beef patties with melted cheddar, fresh lettuce, tomato, and house special sauce.<br> 100$</p>
+      <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+      <p class="card-text">Double beef patties with melted cheddar, fresh lettuce, tomato, and house special sauce.<br> 30$</p>
     </div>
   </div>
 </div>
   </div>
+   </div>
 </section>
+<!-- Seafood Section -->
+<section class="container py-5">
+  <h2 class="category-title text-center">Fresh Seafood</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+        <div class="card bg-secondary text-white h-100">
+        <img src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=400&h=300&fit=crop" class="imgs" alt="Grilled Salmon">
+        <div class="card-body">
+          <h5 class="card-title">Grilled Salmon</h5>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Atlantic salmon with lemon butter sauce and seasonal vegetables<br><span class="price-tag">$28</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card bg-secondary text-white h-100">
+        <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=300&fit=crop" class="imgs" alt="Lobster Thermidor">
+        <div class="card-body">
+          <h5 class="card-title">Lobster Thermidor</h5>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Whole lobster with creamy brandy sauce and gruyere cheese<br><span class="price-tag">$45</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card bg-secondary text-white h-100">
+        <img src="./img/Seafood Paella.png" class="imgs" alt="Seafood Paella">
+        <div class="card-body">
+          <h5 class="card-title">Seafood Paella</h5>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Spanish rice with shrimp, mussels, clams, and saffron<br><span class="price-tag">$32</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Desserts Section -->
+<section class="container py-5 bg-black">
+  <h2 class="category-title text-center">Sweet Endings</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card bg-secondary text-white h-100">
+        <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=400&h=300&fit=crop" class="imgs" alt="Tiramisu">
+        <div class="card-body">
+          <h5 class="card-title">Classic Tiramisu</h5>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Coffee-soaked ladyfingers with mascarpone cream<br><span class="price-tag">$12</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card bg-secondary text-white h-100">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop" class="imgs" alt="Cheesecake">
+        <div class="card-body">
+          <h5 class="card-title">New York Cheesecake</h5>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Creamy cheesecake with berry compote<br><span class="price-tag">$14</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card bg-secondary text-white h-100">
+        <img src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?w=400&h=300&fit=crop" class="imgs" alt="Crème Brûlée">
+        <div class="card-body">
+          <h5 class="card-title">Crème Brûlée</h5>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Vanilla custard with caramelized sugar crust<br><span class="price-tag">$10</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sides Section -->
+<section class="container py-5">
+  <h2 class="category-title text-center">Side Dishes</h2>
+  <div class="row g-4">
+    <div class="col-md-3">
+      <div class="card bg-secondary text-white h-100">
+        <div class="card-body text-center">
+          <h5 class="card-title">Truffle Fries</h5>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Crispy fries with truffle oil and parmesan<br><span class="price-tag">$9</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card bg-secondary text-white h-100">
+        <div class="card-body text-center">
+          <h5 class="card-title">Grilled Asparagus</h5>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Fresh asparagus with lemon zest<br><span class="price-tag">$8</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card bg-secondary text-white h-100">
+        <div class="card-body text-center">
+          <h5 class="card-title">Garlic Mashed Potatoes</h5>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Creamy potatoes with roasted garlic<br><span class="price-tag">$7</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card bg-secondary text-white h-100">
+        <div class="card-body text-center">
+          <h5 class="card-title">Seasonal Vegetables</h5>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Market fresh vegetables steamed<br><span class="price-tag">$6</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Appetizers Section -->
+<section class="container py-5">
+  <h2 class="category-title text-center">Appetizers & Starters</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card bg-secondary text-white h-100">
+        <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=300&fit=crop" class="imgs" alt="Truffle Arancini">
+        <div class="card-body">
+          <h5 class="card-title">Truffle Arancini</h5>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Crispy risotto balls with black truffle and fontina cheese center.<br><span class="price-tag">$16</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card bg-secondary text-white h-100">
+        <img src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=400&h=300&fit=crop" class="imgs" alt="Bruschetta">
+        <div class="card-body">
+          <h5 class="card-title">Tomato Bruschetta</h5>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Toasted bread with fresh tomatoes, basil, and garlic.<br><span class="price-tag">$12</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card bg-secondary text-white h-100">
+        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&h=300&fit=crop" class="imgs" alt="Calamari">
+        <div class="card-body">
+          <h5 class="card-title">Crispy Calamari</h5>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Lightly fried squid with lemon aioli dip.<br><span class="price-tag">$18</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Beverages Section -->
+<section class="container py-5 bg-black">
+  <h2 class="category-title text-center">Beverages & Drinks</h2>
+  <div class="row g-4">
+    <div class="col-md-3">
+      <div class="card bg-secondary text-white h-100">
+        <div class="card-body text-center">
+          <i class="fa fa-glass fa-2x text-warning mb-3"></i>
+          <h5 class="card-title">Signature Cocktails</h5>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Flavory Old Fashioned, Garden Basil Smash<br><span class="price-tag">$14-18</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card bg-secondary text-white h-100">
+        <div class="card-body text-center">
+          <i class="fa fa-wine-glass fa-2x text-warning mb-3"></i>
+          <h5 class="card-title">Wine Selection</h5>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Curated red, white, and sparkling wines<br><span class="price-tag">$12-85</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card bg-secondary text-white h-100">
+        <div class="card-body text-center">
+          <i class="fa fa-beer fa-2x text-warning mb-3"></i>
+          <h5 class="card-title">Craft Beers</h5>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Local and imported craft beers<br><span class="price-tag">$8-12</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card bg-secondary text-white h-100">
+        <div class="card-body text-center">
+          <i class="fa fa-coffee fa-2x text-warning mb-3"></i>
+          <h5 class="card-title">Non-Alcoholic</h5>
+          <button class="btn btn-sm btn-outline-warning favorite-btn" style="position: absolute; top: 10px; right: 10px;">
+    <i class="fa fa-heart-o"></i>
+</button>
+          <p class="card-text">Fresh juices, sodas, specialty coffees<br><span class="price-tag">$5-8</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Reservation Section -->
+<section id="reservation" class="container py-5 bg-black">
+    <h2 class="category-title text-center">Make a Reservation</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card bg-secondary text-white">
+                <div class="card-body p-4">
+                    <form id="reservationForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="reservationName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="reservationName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="reservationEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="reservationEmail" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="reservationDate" class="form-label">Date</label>
+                                <input type="date" class="form-control" id="reservationDate" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="reservationTime" class="form-label">Time</label>
+                                <input type="time" class="form-control" id="reservationTime" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="reservationGuests" class="form-label">Number of Guests</label>
+                                <select class="form-control" id="reservationGuests" required>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5">5+ People</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="reservationPhone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="reservationPhone" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reservationNotes" class="form-label">Special Requests</label>
+                            <textarea class="form-control" id="reservationNotes" rows="3"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-warning btn-lg">Book Table</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer1 text-center py-4">
+  <div class="footer2">
+    <p class="footer3">&copy; 2025 Flavory Restaurant. All rights reserved.</p>
+    <p class="footer4">MADE BY ENG.ZEYAD</p>
+  </div>
+</footer>
 <script src="script.js"></script>
+<button id="backToTop" class="btn btn-warning position-fixed" style="bottom: 20px; right: 20px; display: none; z-index: 1000;">
+    <i class="fa fa-arrow-up"></i>
+</button>
 </body>
 </html>

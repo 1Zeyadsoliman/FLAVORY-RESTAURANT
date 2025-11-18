@@ -45,14 +45,204 @@ Flavory Where every bite tells a story of flavor, passion, and perfection      <
     <p>Enjoy your meal in a relaxing and stylish environment.</p>
   </div>
   <div class="section2">
-    <img src="./img/chef cooking.jpg" alt="Chef Cooking">
+    <img src="./img/chef Cooking.png" alt="Chef Cooking">
     <h3>Skilled Chefs</h3>
     <p>Our chefs blend creativity and expertise to deliver unforgettable tastes.</p>
   </div>
   <div class="section2">
-    <img src="./img/delicious food.jpg" alt="Delicious Food">
+    <img src="./img/the Gourmet Dishes.png" alt="Delicious Food">
     <h3>Gourmet Dishes</h3>
     <p>Explore a variety of signature meals designed to delight every palate.</p>
+  </div>
+</section>
+<!-- Upcoming Events & Specials Section -->
+<section class="events-section py-5 bg-dark">
+  <div class="container">
+    <h2 class="text-center mb-1 text-white">Upcoming Events & Specials</h2>
+    <p class="text-center mb-5 text-muted">Discover unique culinary experiences at Flavory</p>
+    
+    <div class="row g-4">
+      <!-- Event 1 -->
+      <div class="col-md-4">
+        <div class="event-card h-100 bg-black border border-secondary rounded p-4">
+          <div class="event-date text-center mb-3">
+            <span class="d-block fs-4 fw-bold text-warning">Every</span>
+            <span class="d-block text-white-50">Thursday</span>
+          </div>
+          <div class="event-content">
+            <h4 class="text-white mb-3">Wine Pairing Dinner</h4>
+            <p class="text-white-50 mb-3">Join us for an exclusive 5-course menu expertly paired with premium wines from our sommelier selection.</p>
+            <div class="event-details d-flex justify-content-between mb-3">
+              <span class="text-warning fw-bold">$125 per person</span>
+              <span class="text-white-50">7:00 PM - 10:00 PM</span>
+            </div>
+            <button class="btn btn-warning w-100 fw-bold" onclick="document.getElementById('reservation-form').scrollIntoView({behavior: 'smooth'})">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 2 -->
+      <div class="col-md-4">
+        <div class="event-card h-100 bg-black border border-secondary rounded p-4">
+          <div class="event-date text-center mb-3">
+            <span class="d-block fs-4 fw-bold text-warning">Fri & Sat</span>
+            <span class="d-block text-white-50">Weekly</span>
+          </div>
+          <div class="event-content">
+            <h4 class="text-white mb-3">Live Jazz Nights</h4>
+            <p class="text-white-50 mb-3">Enjoy sophisticated jazz performances while dining. Perfect blend of gourmet cuisine and smooth melodies.</p>
+            <div class="event-details d-flex justify-content-between mb-3">
+              <span class="text-warning fw-bold">No cover charge</span>
+              <span class="text-white-50">8:00 PM - 11:00 PM</span>
+            </div>
+            <button class="btn btn-warning w-100 fw-bold" onclick="document.getElementById('reservation-form').scrollIntoView({behavior: 'smooth'})">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 3 -->
+      <div class="col-md-4">
+        <div class="event-card h-100 bg-black border border-warning rounded p-4">
+          <div class="event-date text-center mb-3">
+            <span class="d-block fs-4 fw-bold text-warning">Limited</span>
+            <span class="d-block text-white-50">Seasonal</span>
+          </div>
+          <div class="event-content">
+            <h4 class="text-white mb-3">Chef's Tasting Menu</h4>
+            <p class="text-white-50 mb-3">An immersive 7-course culinary adventure showcasing the best seasonal ingredients. Changes monthly.</p>
+            <div class="event-details d-flex justify-content-between mb-3">
+              <span class="text-warning fw-bold">$95 per person</span>
+              <span class="text-white-50">Available nightly</span>
+            </div>
+            <button class="btn btn-warning w-100 fw-bold" onclick="document.getElementById('reservation-form').scrollIntoView({behavior: 'smooth'})">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Reservation Form Section -->
+<section class="container py-5" id="reservation-form">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h2 class="text-center mb-4 text-warning">Make a Reservation</h2>
+      <p class="text-center text-white-50 mb-5">Book your table for an unforgettable dining experience</p>
+      
+      <div class="bg-black rounded p-4 border border-secondary">
+        <form>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label text-white">Full Name</label>
+              <input type="text" class="form-control bg-dark text-white border-secondary" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label text-white">Phone Number</label>
+              <input type="tel" class="form-control bg-dark text-white border-secondary" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label text-white">Email Address</label>
+              <input type="email" class="form-control bg-dark text-white border-secondary" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label text-white">Number of Guests</label>
+              <select class="form-select bg-dark text-white border-secondary" required>
+                <option value="">Select guests</option>
+                <option>1 person</option>
+                <option>2 people</option>
+                <option>3 people</option>
+                <option>4 people</option>
+                <option>5+ people</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label text-white">Reservation Date</label>
+              <input type="date" class="form-control bg-dark text-white border-secondary" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label text-white">Reservation Time</label>
+              <select class="form-select bg-dark text-white border-secondary" required>
+                <option value="">Select time</option>
+                <option>17:00 (5:00 PM)</option>
+                <option>17:30 (5:30 PM)</option>
+                <option>18:00 (6:00 PM)</option>
+                <option>18:30 (6:30 PM)</option>
+                <option>19:00 (7:00 PM)</option>
+                <option>19:30 (7:30 PM)</option>
+                <option>20:00 (8:00 PM)</option>
+                <option>20:30 (8:30 PM)</option>
+                <option>21:00 (9:00 PM)</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label text-white">Special Requests</label>
+              <textarea class="form-control bg-dark text-white border-secondary" rows="3" placeholder="Any dietary restrictions or special occasions..."></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-warning w-100 fw-bold py-2 mt-3">Confirm Reservation</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      
+      <div class="text-center mt-4">
+        <p class="text-white-50">Prefer to call? <a href="tel:+1234567890" class="text-warning">+1 (234) 567-890</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Social Media Gallery -->
+<section class="gallery py-5 bg-dark">
+  <div class="container">
+    <h2 class="text-center text-white mb-5">Follow Our Journey</h2>
+    <p class="text-center text-white-50 mb-4">@FlavoryRestaurant</p>
+    
+    <div class="row g-3">
+      <!-- Image 1 -->
+      <div class="col-md-3 col-6">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=400&fit=crop" alt="Restaurant Interior" class="img-fluid rounded">
+          <a href="https://instagram.com/FlavoryRestaurant" target="_blank" class="gallery-overlay rounded">
+            <i class="fa fa-instagram text-white"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="col-md-3 col-6">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=400&h=400&fit=crop" alt="Chef Cooking" class="img-fluid rounded">
+          <a href="https://instagram.com/FlavoryRestaurant" target="_blank" class="gallery-overlay rounded">
+            <i class="fa fa-instagram text-white"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Image 3 -->
+      <div class="col-md-3 col-6">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=400&fit=crop" alt="Gourmet Dish" class="img-fluid rounded">
+          <a href="https://instagram.com/FlavoryRestaurant" target="_blank" class="gallery-overlay rounded">
+            <i class="fa fa-instagram text-white"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Image 4 -->
+      <div class="col-md-3 col-6">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=400&fit=crop" alt="Dining Experience" class="img-fluid rounded">
+          <a href="https://instagram.com/FlavoryRestaurant" target="_blank" class="gallery-overlay rounded">
+            <i class="fa fa-instagram text-white"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="https://instagram.com/FlavoryRestaurant" class="btn btn-outline-warning" target="_blank">
+        <i class="fa fa-instagram me-2"></i>Follow Us on Instagram
+      </a>
+    </div>
   </div>
 </section>
 <footer class="footer1 text-center py-4">
